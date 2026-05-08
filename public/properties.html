@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <style>
+        body {
+            background-color:grey;
+            text-decoration: none;
+            text-align: start;
+        }
+
+        p {
+            background-color:white;
+            color: black;
+        }
+        h3{
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <section class="row">
+            <div class="col-md-12">
+                <!-- Nav tag-out all thne content of the navigation bar. -->
+                <nav class="navbar navbar-expand-md navbar-light bg-secondary">
+                    <a href="index.html" class="navbar-brand"><b>Eclix Royal Homes</b></a>
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarcollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- below is the div that carries all the nav bar links -->
+                    <div class="collapse navbar-collapse" id="navbarcollapse">
+                        <div class="navbar-nav">
+                            <a href="index.html" class="nav-link active">Home</a>
+                            <a href="contact.html" class="nav-link">Contact us</a>
+                            <a href="aboutus.html" class="nav-link">About us</a>
+                            <a href="interiors.html">New interiors</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section> <br>
+        <hr>
+        <section class="row text-center text-dark">
+            <h3 class="text-danger text-center">WELCOME TO OUR NEW LUXURY HOUSE PROPERTIES</h3>
+                <div class="col-md-7">
+                    <img src="src/images/grad11.jpg" alt="" width="100%" height="350px">
+                </div>
+                <div class="col-md-5">
+                    <img src="src/images/grad12.jpg" alt="" width="100%" height="350px">
+                </div>
+                <p><u>We offer the best first house rent allowance if the customer is willing after the purchasing of
+                        our homes and properties.The
+                        house allowance is elligible for everyone and we offer all the customers a good stay till the
+                        home settling is done the design of the customer's desire
+                        .</u></p>
+                <br> <br>
+                <u>
+                    <h5>Availabilty of a house compound is at it's epic</h5>
+                </u>
+                <strike>
+                    <h5>No electrical fencing unless is the customers wish</h5>
+                </strike>
+                <u>
+                    <h5>Discount allowed for our long maintained customers</h5>
+                </u>
+        </section>
+        <hr>
+        <section class="luxury-listings">
+            <marquee behavior="scroll" direction="right">Discover more of your luxury Homes</marquee>
+            <div class="property-grid"></div>
+            <br>
+            <!--property 1 -->
+            <div class="card-img">
+            <div class="card-body">
+                    <h3>Contemporary Oceanfront Villa</h3>
+                    <img src="src/images/grad23.jpg" alt="Contemporary Oceanfront Villa" width="100%" height="600px">
+                    <span class="status-badge">For Sale</span>
+                    <p>Limmasol, cyprus| 🛏️ 6 bedrooms |🚿 4 bathrooms</p>
+                    <p>Experience the epitome of coastal living in this stunning oceanfront villa. With panoramic views
+                        of the
+                        sea, this property offers a seamless blend of modern design and natural beauty. Enjoy spacious
+                        living
+                        areas,
+                        a private pool, and direct beach access for the ultimate luxury lifestyle.</p>
+                    <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                        <span id="heart-icon">&#9825;</span>Favourite
+                    </button>
+                    <a href="#" class="view-btn">View Details</a>
+                </div>
+                </div>
+            <br> <br>
+            <!--property 2 -->
+            <div class="card-body">
+                <img src="src/images/grad22.jpg" alt="Modern Penthouse with City Views" width="100%" height="600px">
+                <span class="status-badge">For Sale</span>
+                <div property-info>
+                    <h3>Modern Penthouse with City Views</h3>
+                    <p>Nairobi, Kenya|🛏️ 4 bedrooms |🚿 3 bathrooms</p>
+                    <p>Elevate your urban living experience in this sleek penthouse located in the heart of the city.
+                        Featuring
+                        floor-to-ceiling windows, this property offers breathtaking views of the skyline. Enjoy an
+                        open-concept
+                        living space, a gourmet kitchen, and a private terrace for entertaining guests.</p>
+                    <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                        <span id="heart-icon">&#9825;</span>Favourite
+                    </button>
+                    <a href="#" class="view-btn">View Details</a>
+                </div>
+                </div>
+                <br> <br>
+                <!--property 3 -->
+                <div class="card-body">
+                    <img src="src/images/grad21.jpg" alt="Elegant Estate with Private Gardens" width="100%"
+                        height="600px">
+                    <span class="status-badge">For Sale</span>
+                    <div property-info>
+                        <h3>Elegant Estate with Private Gardens</h3>
+                        <p>Johannesburg, South Africa|🛏️ 5 bedrooms |🚿 4 bathrooms</p>
+                        <p>Discover timeless elegance in this exquisite estate surrounded by lush private gardens. This
+                            property
+                            boasts spacious interiors, a grand foyer, and a serene outdoor oasis perfect for relaxation
+                            and
+                            entertaining. Experience the perfect blend of sophistication and tranquility.</p>
+                        <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                            <span id="heart-icon">&#9825;</span>Favourite
+                        </button>
+                        <a href="#" class="view-btn">View Details</a>
+                    </div>
+                    </div>
+                    <br> <br>
+                    <!--property 4 -->
+                    <div class="card-body">
+
+                        <img src="src/images/grad19.jpg" alt="Luxurious Mountain Retreat" width="100%" height="600px">
+                        <span class="status-badge">For Sale</span>
+                        <div property-info>
+                            <h3>Luxurious Mountain Retreat</h3>
+                            <p>Kigali, Rwanda|🛏️ 4 bedrooms |🚿 3 bathrooms</p>
+                            <p>Escape to this luxurious mountain retreat nestled in the serene hills. With breathtaking
+                                views of the
+                                surrounding landscape, this property offers a perfect blend of comfort and nature. Enjoy
+                                spacious
+                                living areas, a private pool, and outdoor spaces designed for relaxation and
+                                entertainment.</p>
+                            <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                                <span id="heart-icon">&#9825;</span>Favourite
+                            </button>
+                            <a href="#" class="view-btn">View Details</a>
+                        </div>
+                        </div>
+                        <br> <br>
+                        <!--property 5 -->
+                        <div class="card-body">
+                            <img src="src/images/grad20.jpg" alt="Chic Urban Loft with Skyline Views" width="100%"
+                                height="600px">
+                            <span class="status-badge">For Sale</span>
+                            <div property-info>
+                                <h3>Chic Urban Loft with Skyline Views</h3>
+                                <p>Accra, Ghana|🛏️ 3 bedrooms |🚿 2 bathrooms</p>
+                                <p>Experience the vibrant energy of the city in this chic urban loft. Featuring an open
+                                    floor plan and
+                                    floor-to-ceiling windows, this property offers stunning views of the skyline. Enjoy
+                                </p>
+                                <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                                    <span id="heart-icon">&#9825;</span>Favourite
+                                </button>
+                                <a href="#" class="view-btn">View Details</a>
+                            </div>
+                            </div>
+                            <br> <br>
+                            <!--property 6 -->
+                            <div class="card-body">
+                                <img src="src/images/grad19.jpg" alt="Serene Lakeside Villa" width="100%"
+                                    height="600px">
+                                <span class="status-badge">For Sale</span>
+                                <div property-info>
+                                    <h3>Serene Lakeside Villa</h3>
+                                    <p>Entebbe, Uganda|🛏️ 5 bedrooms |🚿 4 bathrooms</p>
+                                    <p>Discover tranquility in this serene lakeside villa, offering breathtaking views
+                                        of the water.
+                                        This property features spacious living areas, a private dock, and an outdoor
+                                        terrace perfect for
+                                        enjoying the peaceful surroundings. Experience the ultimate lakeside lifestyle
+                                        in this luxurious
+                                        retreat.</p>
+                                    <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                                        <span id="heart-icon">&#9825;</span>Favourite
+                                    </button>
+                                    <a href="#" class="view-btn">View Details</a>
+                                </div>
+                                </div>
+                                <br> <br>
+                                <!--property 7 -->
+                                <div class="card-body">
+                                    <img src="src/images/grad18.jpg" alt="Opulent Desert Oasis" width="100%"
+                                        height="600px">
+                                    <span class="status-badge">For Sale</span>
+                                    <div property-info>
+                                        <h3>Opulent Desert Oasis</h3>
+                                        <p>Dubai, UAE|🛏️ 6 bedrooms |🚿 5 bathrooms</p>
+                                        <p>Experience the allure of the desert in this opulent oasis. This property
+                                            boasts stunning
+                                            architecture, luxurious interiors, and a private pool surrounded by lush
+                                            landscaping. Enjoy the
+                                            perfect blend of modern luxury and desert tranquility in this exclusive
+                                            retreat.</p>
+                                        <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                                            <span id="heart-icon">&#9825;</span>Favourite
+                                        </button>
+                                        <a href="#" class="view-btn">View Details</a>
+                                    </div>
+                                    </div>
+                                    <br> <br>
+                                    <!--property 8 -->
+                                    <div class="card-body">
+                                        <img src="src/images/grad17.jpg" alt="Sophisticated Suburban Mansion"
+                                            width="100%" height="600px">
+                                        <span class="status-badge">For Sale</span>
+                                        <div property-info>
+                                            <h3>Sophisticated Suburban Mansion</h3>
+                                            <p>Gaborone, Botswana|🛏️ 5 bedrooms |🚿 4 bathrooms</p>
+                                            <p>Discover refined living in this sophisticated suburban mansion. Featuring
+                                                elegant design,
+                                                spacious interiors
+                                            </p>
+                                            <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                                                <span id="heart-icon">&#9825;</span>Favourite
+                                            </button>
+                                            <a href="#" class="view-btn">View Details</a>
+                                        </div>
+                                        </div>
+                                        <br> <br>
+                                        <!--property 9 -->
+                                        <div class="card-body">
+                                            <img src="src/images/grad16.jpg" alt="Contemporary Coastal Home"
+                                                width="100%" height="600px">
+                                            <span class="status-badge">For Sale</span>
+                                            <div property-info>
+                                                <h3>Contemporary Coastal Home</h3>
+                                                <p>Dar es Salaam, Tanzania|🛏️ 4 bedrooms |🚿 3 bathrooms</p>
+                                                <p>Experience coastal living at its finest in this contemporary home.
+                                                    With stunning ocean
+                                                    views, this property offers a seamless blend of modern design and
+                                                    natural beauty. Enjoy
+                                                    spacious living areas, a private pool, and direct beach access for
+                                                    the ultimate luxury
+                                                    lifestyle.</p>
+                                                <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                                                    <span id="heart-icon">&#9825;</span>Favourite
+                                                </button>
+                                                <a href="#" class="view-btn">View Details</a>
+                                            </div>
+                                            </div>
+                                            <br> <br>
+                                            <!--property 10 -->
+                                            <div class="card-body">
+                                                <img src="src/images/grad15.jpg" alt="Elegant Historic Manor"
+                                                    width="100%" height="600px">
+                                                <span class="status-badge">For Sale</span>
+                                                <div property-info>
+                                                    <h3>Elegant Historic Manor</h3>
+                                                    <p>Harare, Zimbabwe|🛏️ 6 bedrooms |🚿 5 bathrooms</p>
+                                                    <p>Step back in time with this elegant historic manor, showcasing
+                                                        timeless architecture and
+                                                        luxurious interiors. This property features spacious living
+                                                        areas, a grand foyer, and
+                                                        beautifully landscaped gardens. Experience the perfect blend of
+                                                        history and luxury in this
+                                                        exquisite estate.</p>
+                                                    <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                                                        <span id="heart-icon">&#9825;</span>Favourite
+                                                    </button>
+                                                    <a href="#" class="view-btn">View Details</a>
+                                                </div>
+                                                </div>
+                                                <br> <br>
+                                                <!--property 11-->
+                                                <div class="card-body">
+                                                    <img src="src/images/grad14.jpg" alt="Modern Eco-Friendly Home"
+                                                        width="100%" height="600px">
+                                                    <span class="status-badge">For Sale</span>
+                                                    <div property-info>
+                                                        <h3>Modern Eco-Friendly Home</h3>
+                                                        <p>Abidjan, Ivory Coast|🛏️ 4 bedrooms |🚿 3 bathrooms</p>
+                                                        <p>Embrace sustainable luxury in this modern eco-friendly home.
+                                                            Featuring energy-efficient
+                                                            design and eco-conscious materials, this property offers a
+                                                            stylish and environmentally
+                                                            responsible living experience. Enjoy spacious interiors, a
+                                                            private garden, and
+                                                            innovative features that promote sustainability.</p>
+                                                        <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                                                            <span id="heart-icon">&#9825;</span>Favourite
+                                                        </button>
+                                                        <a href="#" class="view-btn">View Details</a>
+                                                    </div>
+                                                    </div>
+                                                    <br> <br>
+                                                    <!--property 12 -->
+
+                                                    <div class="card-body">
+                                                        <img src="src/images/grad13.jpg" alt="Luxurious Urban Penthouse"
+                                                            width="100%" height="600px">
+                                                        <span class="status-badge">For Sale</span>
+                                                        <div property-info>
+                                                            <h3>Luxurious Urban Penthouse</h3>
+                                                            <p>Luanda, Angola|🛏️ 5 bedrooms |🚿 4 bathrooms</p>
+                                                            <p>Experience the pinnacle of urban living in this luxurious
+                                                                penthouse. With stunning
+                                                                city views, this property offers a seamless blend of
+                                                                modern design and sophisticated
+                                                                elegance. Enjoy spacious living areas, a gourmet
+                                                                kitchen, and a private terrace for
+                                                                entertaining guests.</p>
+                                                            <button class="fav-btn"
+                                                                onclick="ToggleFavourite('101', this)">
+                                                                <span id="heart-icon">&#9825;</span>Favourite
+                                                            </button>
+                                                            <a href="#" class="view-btn">View Details</a>
+                                                        </div>
+                                                        </div>
+                                                        <br> <br>
+                                                        <!--property 13 -->
+                                                        <div class="card-body">
+                                                            <img src="src/images/grad12.jpg"
+                                                                alt="Serene Countryside Estate" width="100%"
+                                                                height="600px">
+                                                            <span class="status-badge">For Sale</span>
+                                                            <div property-info>
+                                                                <h3>Serene Countryside Estate</h3>
+                                                                <p>Maputo, Mozambique|🛏️ 6 bedrooms |🚿 5 bathrooms</p>
+                                                                <p>Escape to the tranquility of the countryside in this
+                                                                    serene estate. Surrounded by
+                                                                    lush greenery, this property offers a peaceful
+                                                                    retreat from the hustle and bustle of
+                                                                    city
+                                                                    life. Enjoy spacious living areas, a private pool,
+                                                                    and beautifully landscaped
+                                                                    gardens for
+                                                                    the ultimate countryside lifestyle.</p>
+                                                                <button class="fav-btn"
+                                                                    onclick="ToggleFavourite('101', this)">
+                                                                    <span id="heart-icon">&#9825;</span>Favourite
+                                                                </button>
+                                                                <a href="#" class="view-btn">View Details</a>
+                                                            </div>
+                                                            </div>
+                                                            <div id="mortgage-calc" style="margin-top: 20px;">
+                                                                <h3>Mortgage Calculator</h3>
+                                                                <label for="loan-amount">Loan Amount:</label>
+                                                                <input type="number" id="loan-amount"
+                                                                    placeholder="Enter loan amount">
+                                                                <label for="interest-rate">Interest Rate (%):</label>
+                                                                <input type="number" id="interest-rate"
+                                                                    placeholder="Enter interest rate">
+                                                                <label for="loan-term">Loan Term (years):</label>
+                                                                <input type="number" id="loan-term"
+                                                                    placeholder="Enter loan term in years">
+                                                                <button onclick="calculateMortgage()">Calculate</button>
+                                                                <div id="mortgage-result"></div>
+                                                            </div>
+                                                            <script>
+                                                                function calculateMortgage() {
+                                                                    const loanAmount = parseFloat(document.getElementById('loan-amount').value);
+                                                                    const interestRate = parseFloat(document.getElementById('interest-rate').value) / 100 / 12;
+                                                                    const loanTerm = parseFloat(document.getElementById('loan-term').value) * 12;
+
+                                                                    if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTerm)) {
+                                                                        document.getElementById('mortgage-result').innerText = 'Please enter valid numbers.';
+                                                                        return;
+                                                                    }
+
+                                                                    const monthlyPayment = (loanAmount * interestRate) / (1 - Math.pow(1 + interestRate, -loanTerm));
+                                                                    document.getElementById('mortgage-result').innerText = `Estimated Monthly Payment: $${monthlyPayment.toFixed(2)}`;
+                                                                }
+                                                            </script>
+                                                            <style>
+                                                                .verified-badge {
+                                                                    display: inline-flex;
+                                                                    background-color: #4CAF50;
+                                                                    color: white;
+                                                                    font-size: 0.9rem;
+                                                                    padding: 5px 10px;
+                                                                    border-radius: 20px;
+                                                                    font-size: 12px;
+                                                                    margin-top: 10px;
+                                                                    align-items: center;
+                                                                    font-weight: bold;
+                                                                }
+
+                                                                .verified-badge i {
+                                                                    margin-right: 5px;
+                                                                }
+                                                            </style>
+                                                            <div class="verified-badge">
+                                                                <span class="verified-badge"><i
+                                                                        class="fa-solid fa-check"></i>Verified
+                                                                    Listing</span>
+                                                            </div>
+                                                            <a href="https://wa.me"
+                                                                style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">Chat
+                                                                on WhatsApp</a>
+                                                            <iframe width="100%" height="480"
+                                                                src="https://matterport.com" frameborder="0"
+                                                                allowfullscreen allow="xr-spatial-tracking"></iframe>
+        </section>
+        <hr>
+        <section class="row text-start text-dark">
+            <div class="col-md-3">
+                <div class="card shadow">
+                    <div class="card header">
+                        <h5 class="text-success text-center"><u>Contryside penthouse</u></h5>
+                        <img src="src/images/grad15.jpg" alt="" width="100%" height="200px">
+                        <p><u>This is the best you can be offered in our car company.</u></p>
+                    </div>
+                    <div class="card-body">
+                        <p>This is the best you can be offered in our car company for better experiences.</p>
+                    </div>
+                    <div class="card-footer">
+                        <b class="text-dark">ksh 560,000,000</b> <br>
+                        <span class="badge bg-danger">25%discount</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow">
+                    <div class="card header">
+                        <h5 class="text-success text-center"><u>Compatible Drive</u></h5>
+                        <img src="src/images/grad16.jpg" alt="" width="100%" height="200px">
+                        <p><u>This is the best you can be offered in our car company.</u></p>
+                    </div>
+                    <div class="card-body">
+                        <p>This is the best you can be offered in our car company for better experiences.</p>
+                    </div>
+                    <div class="card-footer">
+                        <b class="text-dark">ksh 860,000,000</b> <br>
+                        <span class="badge bg-danger">15%discount</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow">
+                    <div class="card header">
+                        <h5 class="text-success text-center"><u>Enhanced Drive</u></h5>
+                        <img src="src/images/grad23.jpg" alt="" width="100%" height="200px">
+                        <p><u>This is the best you can be offered in our car company.</u></p>
+                    </div>
+                    <div class="card-body">
+                        <p>This is the best you can be offered in our Eclix Royal Homes for better luxury living
+                            experiences.</p>
+                    </div>
+                    <div class="card-footer">
+                        <b class="text-dark">ksh 360,000</b> <br>
+                        <span class="badge bg-danger">35%discount</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow">
+                    <div class="card header">
+                        <h5 class="text-success text-center"><u>Enjoyable Drive</u></h5>
+                        <img src="src/images/grad24.jpg" alt="" width="100%" height="200px">
+                        <p><u>This is the best you can be offered in our car company.</u></p>
+                    </div>
+                    <div class="card-body">
+                        <p>This is the best you can be offered in our car company for better experiences.</p>
+                    </div>
+                    <div class="card-footer">
+                        <b class="text-dark">ksh 460,000</b> <br>
+                        <span class="badge bg-danger">35%discount</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="row text-start text-dark">
+            <div class="col-md-3">
+                <div class="card shadow">
+                    <div class="card header">
+                        <h5 class="text-success text-center"><u>Active Drive</u></h5>
+                        <img src="src/images/grad26.jpg" alt="" width="100%" height="200px">
+                        <p><u>This is the best you can be offered in our car company.</u></p>
+                    </div>
+                    <div class="card-body">
+                        <p>This is the best you can be offered in our car company for better experiences.</p>
+                    </div>
+                    <div class="card-footer">
+                        <b class="text-dark">ksh 900,000</b> <br>
+                        <span class="badge bg-danger">15%discount</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow">
+                    <div class="card header">
+                        <h5 class="text-success text-center"><u>No mess Drive</u></h5>
+                        <img src="src/images/grad27.jpg" alt="" width="100%" height="200px">
+                        <p><u>This is the best you can be offered in our car company.</u></p>
+                    </div>
+                    <div class="card-body">
+                        <p>This is the best you can be offered in our car company for better experiences.</p>
+                    </div>
+                    <div class="card-footer">
+                        <b class="text-dark">ksh 660,000</b> <br>
+                        <span class="badge bg-danger">25%discount</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow">
+                    <div class="card header">
+                        <h5 class="text-success text-center"><u>Prior Drive</u></h5>
+                        <img src="src/images/grad28.jpg" alt="" width="100%" height="200px">
+                        <p><u>This is the best you can be offered in our car company.</u></p>
+                    </div>
+                    <div class="card-body">
+                        <p>This is the best you can be offered in our car company for better experiences.</p>
+                    </div>
+                    <div class="card-footer">
+                        <b class="text-dark">ksh 560,000</b> <br>
+                        <span class="badge bg-danger">35%discount</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow">
+                    <div class="card header">
+                        <h5 class="text-success text-center"><u>Fancy Drive</u></h5>
+                        <img src="src/images/grad29.jpg" alt="" width="100%" height="200px">
+                        <p><u>This is the best you can be offered in our car company.</u></p>
+                    </div>
+                    <div class="card-body">
+                        <p>This is the best you can be offered in our car company for better experiences.</p>
+                    </div>
+                    <div class="card-footer">
+                        <b class="text-dark">ksh 769,000</b> <br>
+                        <span class="badge bg-danger">35%discount</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eclix Royal Homes</h3>
+                    <p>Curating the most world's most prestigious real estate properties.Also founded on the principles
+                        of
+                        excellence and discretion,Royal haven is a premier real estate boutique dedicated to connecting
+                        global icons
+                        with extra-ordinary properties.Oor mission is to transform the search of a home into a seamless
+                        journey of
+                        discovery.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us On</h3>
+                    <a href="https://wa.me/your_phone_number" target="_blank" class="social-link">WhatsApp</a>
+                    <a href="https://www.instagram.com/your_instagram_handle" target="_blank"
+                        class="social-link">Instagram</a>
+                    <a href="https://twitter.com" target="_blank" class="social-link">Twitter</a>
+                </div>
+                <div class="footer-section" col-md-6>
+                    <h3>Stay Informed</h3>
+                    <p>Subscribe to our newsletter to receive the latest updates and offers.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button>Subscribe</button>
+                        <h3>Connect with us</h3>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/your_instagram_handle" target="_blank"
+                                class="social-link">Instagram</a>
+                            <a href="https://twitter.com" target="_blank" class="social-link">Twitter</a>
+                            <a href="https://wa.me/your_phone_number" target="_blank" class="social-link">WhatsApp</a>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/your_instagram_handle" target="_blank">Instagram</a>|<a
+                            href="https://twitter.com" target="_blank">Twitter</a>|<a
+                            href="https://wa.me/your_phone_number" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-contact-bar">
+                <a href="tel:+254724091668" class="contact-btn call-btn">
+                    <i class="fa-solid fa-phone"></i>CALL NOW
+                </a>
+                <a href="https://wa.me/your_phone_number" class="contact-btn whatsapp-btn" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>WHATSAPP
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p class="text-center">&copy; 2026 Eclix Royal Homes. All rights reserved.</p>
+            </div>
+        </footer>
+        <marquee behavior="" direction="" class="text-center text-dark">WELCOME TO THE REALITY OF YOUR DREAM
+        </marquee>
+        <br> <br>
+        <center class="text-info">Eclix Royal Homes and Propertis<center>
+</body>
+
+</html>
