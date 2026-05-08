@@ -1,42 +1,74 @@
-
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Signup from "./components/Signup";
-import Signin from "./components/Signin";
-import AddProperty from "./components/Addproperty";
-import GetProperty from "./components/Getproperty";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import Mpesapayment from './components/Mpesapayment';
-import { type } from "node:os";
-import { sourceMapsEnabled } from "node:process";
-import React,{useEffect,useRef} from "react";
-function App(){
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import AddProperty from "./pages/AddProperty";
+import Properties from "./pages/Properties";
+import MpesaPayment from "./pages/MpesaPayment";
+import Login from "./components/Login";
+import { signOut } from "firebase/auth";
+function Logout() {
+  const handleLogout = async () => {
+    await signOut(auth);
+    alert("Logged out!");
+  };
+  return <button onClick={handleLogout}>Logout</button>;
+}
+function App() {
+  return (
+    <div>
+      <Signup />
+      <hr />
+      <Login />
+    </div>
+  );
+}
+export default App;
+function app() {
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/add-property" element={<AddProperty />} />
+        <Route path="/properties" element={<Properties />} />
+        <Route path="/mpesa" element={<MpesaPayment />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+export default app;
+function App() {
   const mapRef = useRef(null); //This will hold the map instance
-  useEffect(()=>{
+  useEffect(() => {
     //initialize the map once the  components mounts
-    const map = new google.maps.map(document.getElementById("map"),{
-      center: {lat: -34.397, ing: 150.644},
+    const map = new google.maps.map(document.getElementById("map"), {
+      center: { lat: -34.397, ing: 150.644 },
       zoom: 8,
     });
     mapRef.current = map; //store it in the ref so other functions can use  it 
-  },[]);
-  const someOtherFunction = ()=>{
+  }, []);
+  const someOtherFunction = () => {
     //now you can access it anywhere using mapRef.current
-    if (mapRef.current){
+    if (mapRef.current) {
       console.log("map is ready!", mapRef.current);
     }
   };
-  return <div id="map" style={{height:'400px', width:'100%'}}></div>;
+  return <div id="map" style={{ height: '400px', width: '100%' }}></div>;
 }
-document.querySelector("button").addEventListener("click", ()=>{
+document.querySelector("button").addEventListener("click", () => {
   const location =
-  document.querySelector("input").value;
-  const type=
-  document.querySelector("select").value;
-  if(location && type){
+    document.querySelector("input").value;
+  const type =
+    document.querySelector("select").value;
+  if (location && type) {
     alert(`Searching for ${type} in ${location}`);
-} 
+  }
 });
 function App() {
   return (
@@ -126,14 +158,14 @@ if (body.classList.contains('dark-mode')) {
 localStorage.setItem('theme', theme);
 const searchinput = document.getElementById('propertysearch');
 const cards = document.querySelectorAll('.property-card');
-searchinput.addEventListener('keyup', ()=>{
+searchinput.addEventListener('keyup', () => {
   const query = searchinput.value.toLowerCase();
-  cards.forEach(card=>{
-    const location= card.querySelector('data-location').toLowerCase();
+  cards.forEach(card => {
+    const location = card.querySelector('data-location').toLowerCase();
     const title = card.querySelector('h3').innerText.toLowerCase();
-    if (location.includes(query)||title.includes(query)){
+    if (location.includes(query) || title.includes(query)) {
       card.style.display = "block"
-    } else{
+    } else {
       card.style.display = "none"
 
     }
@@ -142,30 +174,30 @@ searchinput.addEventListener('keyup', ()=>{
 /*global google*/
 /*global maps */
 /*global map*/
-function findnearbyamenities(lat, ing){ //Add map here
-const service = new google.maps.places.placesservice(map);
-//...rest of your code
-service.nearbysearch({
-  location:{lat: lat, ing: ing},
-  radius:2000,
-  type:['school'],
-},(results, status)=>{
-  if (status ===google.maps.places.placesservicestatus.OK){
-    const list = document.getElementById('amenities-list');
-    list.innerHTML = ''; //clear existing list
-    results.forEach(place=>{
-      //crate a list item for each  amenity found
-      const li = document.createElement('li');
-      li.textcontext = `${place.name}-${place.vicinity}`;
-      HTMLDataListElement.appendChild(li);
-      //add a marker for the amenity
-      new google.maps.marker({
-        position:place.geometry.location,
-        maps:maps,
-        title:place.name,
-        icon:'http:google.com'//use green markers for amenities
+function findnearbyamenities(lat, ing) { //Add map here
+  const service = new google.maps.places.placesservice(map);
+  //...rest of your code
+  service.nearbysearch({
+    location: { lat: lat, ing: ing },
+    radius: 2000,
+    type: ['school'],
+  }, (results, status) => {
+    if (status === google.maps.places.placesservicestatus.OK) {
+      const list = document.getElementById('amenities-list');
+      list.innerHTML = ''; //clear existing list
+      results.forEach(place => {
+        //crate a list item for each  amenity found
+        const li = document.createElement('li');
+        li.textcontext = `${place.name}-${place.vicinity}`;
+        HTMLDataListElement.appendChild(li);
+        //add a marker for the amenity
+        new google.maps.marker({
+          position: place.geometry.location,
+          maps: maps,
+          title: place.name,
+          icon: 'http:google.com'//use green markers for amenities
+        })
       })
-    })
-  }
-})
+    }
+  })
 }

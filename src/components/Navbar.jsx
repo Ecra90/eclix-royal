@@ -1,66 +1,33 @@
-import { Link, useNavigate } from "react-router-dom";
-const Navbar = () => {
-  const user = JSON.parse(localStorage.getItem("user"));
-  console.log(user);
+import { Link } from "react-router-dom";
 
-  let navigator = useNavigate();
-
-  const handleLogout = () => {
-    localStorage.clear();
-
-    navigator("/signin");
-  };
-  console.log(user !== null && user.username === "admin");
+function Navbar() {
 
   return (
-    <nav className="navbar navbar-expand-lg">
-      <Link className="navbar-brand" to="/">
-        Eclix Royal Homes
-      </Link>
-      <button
-        className="navbar-toggler"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarCollapse"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
 
-      <div className="collapse navbar-collapse" id="navbarCollapse">
-        <div className="navbar-nav">
-          <Link className="nav-link" to="/">
-            Home
-          </Link>
-          {user !== null && user.role === "admin" ? (
-            <Link className="nav-link" to="/addproperty">
-              Add Property
-            </Link>
-          ) : (
-            ""
-          )}
-        </div>
+    <nav className="navbar">
 
-        {user ? (
-          <div className="navbar-nav ms-auto">
-            <Link className="nav-link" to="#">
-              {user.username}
-            </Link>
-            <button className="btn nav-link" onClick={handleLogout}>
-              Log Out
-            </button>
-          </div>
-        ) : (
-          <div className="navbar-nav ms-auto">
-            <Link className="nav-link" to="/signin">
-              Sign in
-            </Link>
-            <Link className="nav-link" to="/signup">
-              Sign up
-            </Link>
-          </div>
-        )}
+      <h2>Luxury Homes</h2>
+
+      <div>
+
+        <Link to="/">Home</Link>
+
+        <Link to="/properties">Properties</Link>
+
+        <Link to="/add-property">Add Property</Link>
+
+        <Link to="/signin">Sign In</Link>
+
+        <Link to="/signup">Sign Up</Link>
+
+        <Link to="/mpesa">M-Pesa</Link>
+
       </div>
+
     </nav>
+
   );
-};
+
+}
 
 export default Navbar;
