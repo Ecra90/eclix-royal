@@ -1,89 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eclix Royal Homes favourites</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eclix Royal Homes favourites</title>
 </head>
+
 <body>
-    <div
-    class="navbar-nav">
+  <div class="navbar-nav">
     <a href="index.html">Home</a>
     <a href="listings.html">listings
     </a>
-    </div>
-<section class="favorites">
-  <h2>Your Favourite Properties</h2>
-  <div id="fav-list"></div>
-</section>
-<script>
-let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+  </div>
+  <section class="favourites">
+    <h2>Your Favourite Properties</h2>
+    <div id="fav-list"></div>
+  </section>
+  <script>
+    let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
 
-const properties = {
-  villa1: {
-    title: "City penthouse",
-    price: "$2,500,000",
-    img: "src.images.grad13.jpg"
-  },
-  villa2: {
-    title: "Ocean View Villa",
-    price: "$3,200,000",
-    img: "src/images/grad12.jpg"
-  }
-};
+    const properties = {
+      villa1: {
+        title: "City penthouse",
+        price: "$2,500,000",
+        img: "src.images.grad13.jpg"
+      },
+      villa2: {
+        title: "Ocean View Villa",
+        price: "$3,200,000",
+        img: "src/images/grad12.jpg"
+      }
+    };
 
-function renderFavourites() {
-  let container = document.getElementById("fav-list");
-  container.innerHTML = "";
+    function renderFavourites() {
+      let container = document.getElementById("fav-list");
+      container.innerHTML = "";
 
-  if (favourites.length === 0) {
-    container.innerHTML = "<p>No favourites yet 💔</p>";
-    return;
-  }
+      if (favourites.length === 0) {
+        container.innerHTML = "<p>No favourites yet 💔</p>";
+        return;
+      }
 
-  favourites.forEach(id => {
-    let p = properties[id];
-    if (!p) return;
+      favourites.forEach(id => {
+        let p = properties[id];
+        if (!p) return;
 
-    container.innerHTML += `
+        container.innerHTML += `
       <div class="fav-card">
         <img src="${p.img}">
         <h3>${p.title}</h3>
         <p>${p.price}</p>
       </div>
     `;
-  });
-}
+      });
+    }
 
-window.onload = renderFavourites;
-</script>
+    window.onload = renderFavourites;
+  </script>
 
-<style>
-.favorites {
-  padding: 80px;
-  text-align: center;
-  background: #0f172a;
-  color: white;
-}
+  <style>
+    .favorites {
+      padding: 80px;
+      text-align: center;
+      background: #0f172a;
+      color: white;
+    }
 
-#fav-list {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+    #fav-list {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-.fav-card {
-  background: #1e293b;
-  padding: 15px;
-  border-radius: 12px;
-  width: 250px;
-}
+    .fav-card {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 12px;
+      width: 250px;
+    }
 
-.fav-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-</style>
+    .fav-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
 </body>
+
 </html>
