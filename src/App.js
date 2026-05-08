@@ -17,7 +17,7 @@ function Logout() {
   };
   return <button onClick={handleLogout}>Logout</button>;
 }
-function App() {
+function Nancy() {
   return (
     <div>
       <Signup />
@@ -26,8 +26,8 @@ function App() {
     </div>
   );
 }
-export default App;
-function app() {
+export default Nancy;
+function App() {
   return (
     <BrowserRouter>
       <Navbar />
@@ -42,8 +42,8 @@ function app() {
     </BrowserRouter>
   );
 }
-export default app;
-function App() {
+export default App;
+function Ecra() {
   const mapRef = useRef(null); //This will hold the map instance
   useEffect(() => {
     //initialize the map once the  components mounts
@@ -70,7 +70,7 @@ document.querySelector("button").addEventListener("click", () => {
     alert(`Searching for ${type} in ${location}`);
   }
 });
-function App() {
+function Lisa() {
   return (
     <BrowserRouter>
       <div className="container-fluid">
@@ -92,7 +92,7 @@ function App() {
   );
 }
 
-export default App;
+export default Lisa;
 function ToggleFavourite(propertyId, button) {
   /*get existing favourites or start an empty array*/
   let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
