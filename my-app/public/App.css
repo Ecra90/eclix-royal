@@ -21,7 +21,7 @@ body{
     background-color: #666;
 }
 .hero{
-    background-image: url(src/images/grad10.jpg);
+    background-image: url(images/grad10.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -29,7 +29,7 @@ body{
 }
 .overlay{
     padding: 20px;
-    background-image:url(src/images/grad11.jpg);
+    background-image:url(images/grad11.jpg);
     height: 100%;
     width: fit-content;
 }
@@ -146,6 +146,20 @@ body{
 .fav-btn.active{
     background: red;
     color: white;
+}
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  background: gold;
+  font-weight: bold;
 }
 .fav-btn:hover{
     background: red;

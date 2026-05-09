@@ -37,3 +37,23 @@ export default function Login() {
     </form>
   );
 }
+function Login() {
+  return (
+    <div className="login-container">
+      <h1>Login</h1>
+
+      <form>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+
+        <button type="submit">Login</button>
+      </form>
+
+      <p>
+        Don't have an account? <a href="/signup">Sign up here</a>
+      </p>
+    </div>
+  );
+}
+
+export default Login;
