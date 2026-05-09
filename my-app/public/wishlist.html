@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="interiors.html">New interiors</a>
+        <a href="properties.html">Properties</a>
+        <a href="vipaccess.html">Vip Acces</a>
+    </div>
+    <script>
+        function getWishlist() {
+            return JSON.parse(localStorage.getItem("wishlist")) || [];
+        }
+
+        function saveWishlist(data) {
+            localStorage.setItem("wishlist", JSON.stringify(data));
+        }
+
+        function toggleWishlist(btn, name, price, image) {
+
+            let wishlist = getWishlist();
+
+            const exists = wishlist.find(item => item.name === name);
+
+            if (exists) {
+                wishlist = wishlist.filter(item => item.name !== name);
+                btn.classList.remove("saved");
+                btn.innerText = "❤️ Save Property";
+            } else {
+                wishlist.push({ name, price, image });
+                btn.classList.add("saved");
+                btn.innerText = "❤️ Saved";
+            }
+
+            saveWishlist(wishlist);
+        }
+    </script>
+</body>
+
+</html>
