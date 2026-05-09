@@ -1,13 +1,12 @@
+import React,{useEffect, useRef} from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-import AddProperty from "./pages/AddProperty";
-import Properties from "./pages/Properties";
-import MpesaPayment from "./pages/MpesaPayment";
+import Home from "./components/Home";
+import SignUp from "./components/Signup";
+import Properties from "./components/GetProperties";
+import MpesaPayment from "./components/Mpesapayment";
 import Login from "./components/Login";
 import { signOut } from "firebase/auth";
 function Logout() {
@@ -17,27 +16,16 @@ function Logout() {
   };
   return <button onClick={handleLogout}>Logout</button>;
 }
-function Nancy() {
-  return (
-    <div>
-      <Signup />
-      <hr />
-      <Login />
-    </div>
-  );
-}
-export default Nancy;
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/add-property" element={<AddProperty />} />
         <Route path="/properties" element={<Properties />} />
         <Route path="/mpesa" element={<MpesaPayment />} />
+        <Route path="/login" element={<Login/>}/>
       </Routes>
     </BrowserRouter>
   );
@@ -70,29 +58,6 @@ document.querySelector("button").addEventListener("click", () => {
     alert(`Searching for ${type} in ${location}`);
   }
 });
-function Lisa() {
-  return (
-    <BrowserRouter>
-      <div className="container-fluid">
-        <div className="App">
-          <header className="App-header">
-            <h1>Eclix Royal Homes</h1>
-          </header>
-
-          <Routes>
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/signin" element={<Signin />} />
-            <Route path="/addproperty" element={<AddProperty />} />
-            <Route path="/" element={<GetProperty />} />
-            <Route path="/mpesapayment" element={<Mpesapayment />} />
-          </Routes>
-        </div>
-      </div>
-    </BrowserRouter>
-  );
-}
-
-export default Lisa;
 function ToggleFavourite(propertyId, button) {
   /*get existing favourites or start an empty array*/
   let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
