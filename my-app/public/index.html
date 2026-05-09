@@ -18,7 +18,8 @@
     <div class="col-md-12">
       <!-- Nav tag-out all thne content of the navigation bar. -->
       <nav class="navbar navbar-expand-md navbar-light bg-secondary">
-        <h4 style="font-family: 'Courier New', Courier, monospace;font-size: larger; color: gold;display: inline;">Eclix Royal Homes And Properties</h4>
+        <h4 style="font-family: 'Courier New', Courier, monospace;font-size: larger; color: gold;display: inline;">Eclix
+          Royal Homes And Properties</h4>
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarcollapse">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -109,7 +110,7 @@
   </script>
   <!-- ========= 2. IMAGE SLIDER ========= -->
   <div class="slider">
-    <img id="slide" src="src/images/grad12.jpg">
+    <img id="slide" src="images/grad11.jpg">
   </div>
   <style>
     .slider img {
@@ -120,7 +121,7 @@
     }
   </style>
   <script>
-    let images = ["src/images.grad15.jpg", "src/images.grad13.jpg", "src/images.grad14.jpg"];
+    let images = ["images.grad15.jpg", "images.grad13.jpg", "images.grad14.jpg"];
     let i = 0;
     setInterval(() => {
       i++;
@@ -144,7 +145,7 @@
   </script>
   <!-- ========= 4. PROPERTY CARD ========= -->
   <div class="property-card">
-    <img src="src/images/grad13.jpg">
+    <img src="images/grad13.jpg">
     <h2>Luxury Villa</h2>
     <p>$4,500,000</p>
     <button>View Details</button>
@@ -255,7 +256,7 @@
       padding: 15px;
       border: none;
       border-radius: 50%;
-      background:gold;
+      background: gold;
       cursor: pointer;
     }
   </style>
@@ -298,9 +299,9 @@
   </script>
   <!-- ========= 16. AGENT CARD ========= -->
   <div class="agent">
-    <img src="src/images/agent.jpg">
+    <img src="images/agent.jpg">
     <h2>Michael Carter</h2>
-    <p >Luxury Property Specialist</p>
+    <p>Luxury Property Specialist</p>
   </div>
   <style>
     .agent {
@@ -444,11 +445,11 @@
     <div class="chatbox" id="chatbox">
 
       <div class="chat-header">
-       Eclix Luxury Homes Assistant
+        Eclix Luxury Homes Assistant
       </div>
 
       <div class="chat-body" id="chat-body">
-        <div class="msg bot">Hello 👋 How can I assist you with  Eclix luxury properties today?</div>
+        <div class="msg bot">Hello 👋 How can I assist you with Eclix luxury properties today?</div>
       </div>
 
       <div class="chat-footer">
@@ -767,7 +768,7 @@
               });
             };
           </script>
-          <img src="src/images/grad23.jpg" alt="Contemporary Oceanfront Villa" width="100%" height="600px">
+          <img src="images/grad23.jpg" alt="Contemporary Oceanfront Villa" width="100%" height="600px">
           <span class="status-badge">For Sale</span> &nbsp; <span class="status-badge btn-btn warning">Featured</span>
         </div>
         <div property-info>
@@ -777,7 +778,11 @@
             sea, this property offers a seamless blend of modern design and natural beauty. Enjoy spacious living
             areas,
             a private pool, and direct beach access for the ultimate luxury lifestyle.</p>
-          <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+          <p>KES 2,500</p>
+                 <button onclick="payNow()">
+                  Buy Now
+                </button>
+            <button class="fav-btn" onclick="ToggleFavourite('101', this)">
             <span id="heart-icon">&#9825;</span>Favourite
           </button>
           <a href="#" class="view-btn">View Details</a>
@@ -786,7 +791,7 @@
       <br> <br>
       <!--property 2 -->
       <div>
-        <img src="src/images/grad22.jpg" alt="Modern Penthouse with City Views" width="100%" height="600px">
+        <img src="images/grad22.jpg" alt="Modern Penthouse with City Views" width="100%" height="600px">
         <span class="status-badge">For Sale</span>
         <div property-info>
           <h3>Modern Penthouse with City Views</h3>
@@ -794,7 +799,11 @@
           <p>Elevate your urban living experience in this sleek penthouse located in the heart of the city. Featuring
             floor-to-ceiling windows, this property offers breathtaking views of the skyline. Enjoy an open-concept
             living space, a gourmet kitchen, and a private terrace for entertaining guests.</p>
-          <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+          <p>KES 2,500</p>
+                 <button onclick="payNow()">
+                  Buy Now
+                </button>
+            <button class="fav-btn" onclick="ToggleFavourite('101', this)">
             <span id="heart-icon">&#9825;</span>Favourite
           </button>
           <a href="#" class="view-btn">View Details</a>
@@ -802,7 +811,7 @@
         <br> <br>
         <!--property 3 -->
         <div class="property-card">
-          <img src="src/images/grad21.jpg" alt="Elegant Estate with Private Gardens" width="100%" height="600px">
+          <img src="images/grad21.jpg" alt="Elegant Estate with Private Gardens" width="100%" height="600px">
           <span class="status-badge">For Sale</span>
           <div property-info>
             <h3>Elegant Estate with Private Gardens</h3>
@@ -810,7 +819,11 @@
             <p>Discover timeless elegance in this exquisite estate surrounded by lush private gardens. This property
               boasts spacious interiors, a grand foyer, and a serene outdoor oasis perfect for relaxation and
               entertaining. Experience the perfect blend of sophistication and tranquility.</p>
-            <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+            <p>KES 2,500</p>
+                 <button onclick="payNow()">
+                  Buy Now
+                </button>
+              <button class="fav-btn" onclick="ToggleFavourite('101', this)">
               <span id="heart-icon">&#9825;</span>Favourite
             </button>
             <a href="#" class="view-btn">View Details</a>
@@ -818,7 +831,7 @@
           <br> <br>
           <!--property 4 -->
           <div class="property-card">
-            <img src="src/images/grad19.jpg" alt="Luxurious Mountain Retreat" width="100%" height="600px">
+            <img src="images/grad19.jpg" alt="Luxurious Mountain Retreat" width="100%" height="600px">
             <span class="status-badge">For Sale</span>
             <div property-info>
               <h3>Luxurious Mountain Retreat</h3>
@@ -826,7 +839,11 @@
               <p>Escape to this luxurious mountain retreat nestled in the serene hills. With breathtaking views of the
                 surrounding landscape, this property offers a perfect blend of comfort and nature. Enjoy spacious
                 living areas, a private pool, and outdoor spaces designed for relaxation and entertainment.</p>
-              <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+              <p>KES 2,500</p>
+                 <button onclick="payNow()">
+                  Buy Now
+                </button>
+                <button class="fav-btn" onclick="ToggleFavourite('101', this)">
                 <span id="heart-icon">&#9825;</span>Favourite
               </button>
               <a href="#" class="view-btn">View Details</a>
@@ -834,13 +851,18 @@
             <br> <br>
             <!--property 5 -->
             <div class="property-card">
-              <img src="src/images/grad20.jpg" alt="Chic Urban Loft with Skyline Views" width="100%" height="600px">
+              <img src="images/grad20.jpg" alt="Chic Urban Loft with Skyline Views" width="100%" height="600px">
               <span class="status-badge">For Sale</span>
               <div property-info>
                 <h3>Chic Urban Loft with Skyline Views</h3>
                 <p>Accra, Ghana|🛏️ 3 bedrooms |🚿 2 bathrooms</p>
                 <p>Experience the vibrant energy of the city in this chic urban loft. Featuring an open floor plan and
-                  floor-to-ceiling windows, this property offers stunning views of the skyline. Enjoy</p>
+                 
+                 floor-to-ceiling windows, this property offers stunning views of the skyline. Enjoy</p>
+                 <p>KES 2,500</p>
+                 <button onclick="payNow()">
+                  Buy Now
+                </button>
                 <button class="fav-btn" onclick="ToggleFavourite('101', this)">
                   <span id="heart-icon">&#9825;</span>Favourite
                 </button>
@@ -849,7 +871,7 @@
               <br> <br>
               <!--property 6 -->
               <div class="property-card">
-                <img src="src/images/grad19.jpg" alt="Serene Lakeside Villa" width="100%" height="600px">
+                <img src="images/grad19.jpg" alt="Serene Lakeside Villa" width="100%" height="600px">
                 <span class="status-badge">For Sale</span>
                 <div property-info>
                   <h3>Serene Lakeside Villa</h3>
@@ -858,6 +880,10 @@
                     This property features spacious living areas, a private dock, and an outdoor terrace perfect for
                     enjoying the peaceful surroundings. Experience the ultimate lakeside lifestyle in this luxurious
                     retreat.</p>
+                    <p>KES 2,500</p>
+                 <button onclick="payNow()">
+                  Buy Now
+                </button>
                   <button class="fav-btn" onclick="ToggleFavourite('101', this)">
                     <span id="heart-icon">&#9825;</span>Favourite
                   </button>
@@ -866,7 +892,7 @@
                 <br> <br>
                 <!--property 7 -->
                 <div class="property-card">
-                  <img src="src/images/grad18.jpg" alt="Opulent Desert Oasis" width="100%" height="600px">
+                  <img src="images/grad18.jpg" alt="Opulent Desert Oasis" width="100%" height="600px">
                   <span class="status-badge">For Sale</span>
                   <div property-info>
                     <h3>Opulent Desert Oasis</h3>
@@ -874,7 +900,11 @@
                     <p>Experience the allure of the desert in this opulent oasis. This property boasts stunning
                       architecture, luxurious interiors, and a private pool surrounded by lush landscaping. Enjoy the
                       perfect blend of modern luxury and desert tranquility in this exclusive retreat.</p>
-                    <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                    <p>KES 2,500</p>
+                 <button onclick="payNow()">
+                  Buy Now
+                </button>
+                      <button class="fav-btn" onclick="ToggleFavourite('101', this)">
                       <span id="heart-icon">&#9825;</span>Favourite
                     </button>
                     <a href="#" class="view-btn">View Details</a>
@@ -882,7 +912,7 @@
                   <br> <br>
                   <!--property 8 -->
                   <div class="property-card">
-                    <img src="src/images/grad17.jpg" alt="Sophisticated Suburban Mansion" width="100%" height="600px">
+                    <img src="images/grad17.jpg" alt="Sophisticated Suburban Mansion" width="100%" height="600px">
                     <span class="status-badge">For Sale</span>
                     <div property-info>
                       <h3>Sophisticated Suburban Mansion</h3>
@@ -890,6 +920,10 @@
                       <p>Discover refined living in this sophisticated suburban mansion. Featuring elegant design,
                         spacious interiors
                       </p>
+                      <p>KES 2,500</p>
+                 <button onclick="payNow()">
+                  Buy Now
+                </button>
                       <button class="fav-btn" onclick="ToggleFavourite('101', this)">
                         <span id="heart-icon">&#9825;</span>Favourite
                       </button>
@@ -898,7 +932,7 @@
                     <br> <br>
                     <!--property 9 -->
                     <div class="property-card">
-                      <img src="src/images/grad16.jpg" alt="Contemporary Coastal Home" width="100%" height="600px">
+                      <img src="images/grad16.jpg" alt="Contemporary Coastal Home" width="100%" height="600px">
                       <span class="status-badge">For Sale</span>
                       <div property-info>
                         <h3>Contemporary Coastal Home</h3>
@@ -907,6 +941,10 @@
                           views, this property offers a seamless blend of modern design and natural beauty. Enjoy
                           spacious living areas, a private pool, and direct beach access for the ultimate luxury
                           lifestyle.</p>
+                          <p>KES 2,500</p>
+                 <button onclick="payNow()">
+                  Buy Now
+                </button>
                         <button class="fav-btn" onclick="ToggleFavourite('101', this)">
                           <span id="heart-icon">&#9825;</span>Favourite
                         </button>
@@ -915,7 +953,7 @@
                       <br> <br>
                       <!--property 10 -->
                       <div class="property-card">
-                        <img src="src/images/grad15.jpg" alt="Elegant Historic Manor" width="100%" height="600px">
+                        <img src="images/grad15.jpg" alt="Elegant Historic Manor" width="100%" height="600px">
                         <span class="status-badge">For Sale</span>
                         <div property-info>
                           <h3>Elegant Historic Manor</h3>
@@ -924,6 +962,10 @@
                             luxurious interiors. This property features spacious living areas, a grand foyer, and
                             beautifully landscaped gardens. Experience the perfect blend of history and luxury in this
                             exquisite estate.</p>
+                            <p>KES 2,500</p>
+                 <button onclick="payNow()">
+                  Buy Now
+                </button>
                           <button class="fav-btn" onclick="ToggleFavourite('101', this)">
                             <span id="heart-icon">&#9825;</span>Favourite
                           </button>
@@ -932,7 +974,7 @@
                         <br> <br>
                         <!--property 11-->
                         <div class="property-card">
-                          <img src="src/images/grad14.jpg" alt="Modern Eco-Friendly Home" width="100%" height="600px">
+                          <img src="images/grad14.jpg" alt="Modern Eco-Friendly Home" width="100%" height="600px">
                           <span class="status-badge">For Sale</span>
                           <div property-info>
                             <h3>Modern Eco-Friendly Home</h3>
@@ -941,7 +983,11 @@
                               design and eco-conscious materials, this property offers a stylish and environmentally
                               responsible living experience. Enjoy spacious interiors, a private garden, and
                               innovative features that promote sustainability.</p>
-                            <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                         <p>KES 2,500</p>
+                 <button onclick="payNow()">
+                  Buy Now
+                </button>
+                              <button class="fav-btn" onclick="ToggleFavourite('101', this)">
                               <span id="heart-icon">&#9825;</span>Favourite
                             </button>
                             <a href="#" class="view-btn">View Details</a>
@@ -950,7 +996,7 @@
                           <!--property 12 -->
 
                           <div class="property-card">
-                            <img src="src/images/grad13.jpg" alt="Luxurious Urban Penthouse" width="100%"
+                            <img src="images/grad13.jpg" alt="Luxurious Urban Penthouse" width="100%"
                               height="600px">
                             <span class="status-badge">For Sale</span>
                             <div property-info>
@@ -960,7 +1006,11 @@
                                 city views, this property offers a seamless blend of modern design and sophisticated
                                 elegance. Enjoy spacious living areas, a gourmet kitchen, and a private terrace for
                                 entertaining guests.</p>
-                              <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                         <p>KES 2,500</p>
+                 <button onclick="payNow()">
+                  Buy Now
+                </button>
+                                <button class="fav-btn" onclick="ToggleFavourite('101', this)">
                                 <span id="heart-icon">&#9825;</span>Favourite
                               </button>
                               <a href="#" class="view-btn">View Details</a>
@@ -968,7 +1018,7 @@
                             <br> <br>
                             <!--property 13 -->
                             <div class="property-card">
-                              <img src="src/images/grad12.jpg" alt="Serene Countryside Estate" width="100%"
+                              <img src="images/grad12.jpg" alt="Serene Countryside Estate" width="100%"
                                 height="600px">
                               <span class="status-badge">For Sale</span>
                               <div property-info>
@@ -980,7 +1030,11 @@
                                   life. Enjoy spacious living areas, a private pool, and beautifully landscaped
                                   gardens for
                                   the ultimate countryside lifestyle.</p>
-                                <button class="fav-btn" onclick="ToggleFavourite('101', this)">
+                         <p>KES 2,500</p>
+                 <button onclick="payNow()">
+                  Buy Now
+                </button>
+                                  <button class="fav-btn" onclick="ToggleFavourite('101', this)">
                                   <span id="heart-icon">&#9825;</span>Favourite
                                 </button>
                                 <a href="properties.html" class="view-btn"><button type="submit">View Details</button>
@@ -1448,7 +1502,7 @@
       color: #cbd5e1;
       font-size: 14px;
       margin-bottom: 10px;
-    }
+    }rect
 
     .footer-vip input {
       width: 100%;
@@ -1529,5 +1583,4 @@
     });
   </script>
 </body>
-
 </html>
