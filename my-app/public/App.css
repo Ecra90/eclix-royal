@@ -161,6 +161,27 @@ body{
   background: gold;
   font-weight: bold;
 }
+.wishlist-btn{
+  margin-top:15px;
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#334155;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.wishlist-btn:hover{
+  background:#475569;
+}
+
+.wishlist-btn.saved{
+  background:gold;
+  color:#111827;
+}
 .fav-btn:hover{
     background: red;
     color: white;

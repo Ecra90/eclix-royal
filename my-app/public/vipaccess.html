@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIP Access Properties</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: white;
+    }
+
+    .hero {
+      height: 60vh;
+      background: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      color: gold;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #f1f5f9;
+    }
+
+    .properties {
+      padding: 60px 40px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: gold;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #1e293b;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 25px;
+    }
+
+    .card-content h3 {
+      color: gold;
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+    }
+
+    .location {
+      color: #94a3b8;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .description {
+      line-height: 1.7;
+      color: #e2e8f0;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      color: #22c55e;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      background: gold;
+      color: #111827;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #facc15;
+    }
+
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
+      margin-top: 50px;
+    }
+
+    @media(max-width:768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar-nav">
+    <a href="index.html">Home
+    </a>
+    <a href="privatetours.html">Private tours</a>
+  </div>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>VIP ACCESS</h1>
+      <p>
+        Explore exclusive luxury homes, private villas,
+        and elite penthouses available only for premium members.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROPERTY SECTION -->
+  <section class="properties">
+
+    <div class="section-title">
+      <h2>Luxury Properties</h2>
+    </div>
+
+    <div class="cards">
+
+      <!-- PROPERTY 1 -->
+      <div class="card">
+        <img src="images/grad19.jpg" alt="Luxury Villa">
+
+        <div class="card-content">
+          <h3>Ocean View Villa</h3>
+
+          <div class="location">
+            Malibu, California
+          </div>
+
+          <p class="description">
+            Stunning modern villa featuring an infinity pool,
+            private cinema, smart home automation,
+            luxury bedrooms, and breathtaking ocean views.
+          </p>
+
+          <div class="price">
+            $5.8 Million
+          </div>
+
+          <a href="#" class="btn">VIP Access</a>
+        </div>
+      </div>
+
+      <!-- PROPERTY 2 -->
+      <div class="card">
+        <img src="images/grad40.jpg" alt="Luxury Mansion">
+
+        <div class="card-content">
+          <h3>Royal Mansion</h3>
+
+          <div class="location">
+            Beverly Hills, California
+          </div>
+
+          <p class="description">
+            Elegant mansion with luxury spa,
+            indoor gym, marble interiors,
+            wine cellar, and a large private garden.
+          </p>
+
+          <div class="price">
+            $8.2 Million
+          </div>
+
+          <a href="#" class="btn">VIP Access</a>
+        </div>
+      </div>
+
+      <!-- PROPERTY 3 -->
+      <div class="card">
+        <img src="images/grad13.jpg" alt="Luxury Penthouse">
+
+        <div class="card-content">
+          <h3>Skyline Penthouse</h3>
+
+          <div class="location">
+            Dubai Marina, UAE
+          </div>
+
+          <p class="description">
+            Ultra-modern penthouse with rooftop lounge,
+            luxury kitchen, private elevator,
+            and panoramic skyline views.
+          </p>
+
+          <div class="price">
+            $6.4 Million
+          </div>
+
+          <a href="#" class="btn">VIP Access</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/grad27.jpg" alt="Luxury Penthouse">
+
+        <div class="card-content">
+          <h3>Encylced Home</h3>
+
+          <div class="location">
+            Dubai Marina, UAE
+          </div>
+
+          <p class="description">
+            Ultra-modern penthouse with rooftop lounge,
+            luxury kitchen, private elevator,
+            and panoramic skyline views.
+          </p>
+
+          <div class="price">
+            $6.4 Million
+          </div>
+
+          <a href="#" class="btn">VIP Access</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/grade35.jpg" alt="Luxury Penthouse">
+
+        <div class="card-content">
+          <h3>Skyline Penthouse</h3>
+
+          <div class="location">
+            Dubai Marina, UAE
+          </div>
+
+          <p class="description">
+            Ultra-modern penthouse with rooftop lounge,
+            luxury kitchen, private elevator,
+            and panoramic skyline views.
+          </p>
+
+          <div class="price">
+            $6.4 Million
+          </div>
+
+          <a href="#" class="btn">VIP Access</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/grad27.jpg" alt="Luxury Penthouse">
+
+        <div class="card-content">
+          <h3>Royal Home</h3>
+
+          <div class="location">
+            Dubai Marina, UAE
+          </div>
+
+          <p class="description">
+            Ultra-modern penthouse with rooftop lounge,
+            luxury kitchen, private elevator,
+            and panoramic skyline views.
+          </p>
+
+          <div class="price">
+            $6.4 Million
+          </div>
+
+          <a href="#" class="btn">VIP Access</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/grad21.jpg" alt="Luxury Penthouse">
+
+        <div class="card-content">
+          <h3>Maldives palace</h3>
+
+          <div class="location">
+            Dubai Marina, UAE
+          </div>
+
+          <p class="description">
+            Ultra-modern penthouse with rooftop lounge,
+            luxury kitchen, private elevator,
+            and panoramic skyline views.
+          </p>
+
+          <div class="price">
+            $6.4 Million
+          </div>
+
+          <a href="#" class="btn">VIP Access</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/grad17.jpg" alt="Luxury Penthouse">
+
+        <div class="card-content">
+          <h3>Skyline Villa</h3>
+
+          <div class="location">
+            Dubai Marina, UAE
+          </div>
+
+          <p class="description">
+            Ultra-modern penthouse with rooftop lounge,
+            luxury kitchen, private elevator,
+            and panoramic skyline views.
+          </p>
+
+          <div class="price">
+            $6.4 Million
+          </div>
+
+          <a href="#" class="btn">VIP Access</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/grad15.jpg" alt="Luxury Penthouse">
+
+        <div class="card-content">
+          <h3>Blueocean Penthouse</h3>
+
+          <div class="location">
+            Dubai Marina, UAE
+          </div>
+
+          <p class="description">
+            Ultra-modern penthouse with rooftop lounge,
+            luxury kitchen, private elevator,
+            and panoramic skyline views.
+          </p>
+
+          <div class="price">
+            $6.4 Million
+          </div>
+
+          <a href="#" class="btn">VIP Access</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SIGN UP SECTION -->
+  <section class="signup-section">
+
+    <div class="signup-container">
+
+      <h2>Join VIP Access</h2>
+
+      <p>
+        Create your premium account and unlock exclusive luxury properties,
+        private tours, and elite member benefits.
+      </p>
+
+      <form class="signup-form">
+
+        <input type="text" placeholder="Full Name" required>
+
+        <input type="email" placeholder="Email Address" required>
+
+        <input type="password" placeholder="Create Password" required>
+
+        <input type="tel" placeholder="Phone Number">
+
+        <button type="submit">Create VIP Account</button>
+
+      </form>
+
+    </div>
+
+  </section>
+  <footer>
+    © 2026 VIP Access Luxury Properties
+  </footer>
+
+</body>
+
+</html>

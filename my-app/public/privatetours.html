@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Private Tours | VIP Access</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+        /* HERO */
+
+        .hero {
+            height: 70vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            color: gold;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            max-width: 700px;
+            font-size: 1.2rem;
+            color: #e2e8f0;
+            line-height: 1.7;
+            margin: auto;
+        }
+
+        /* SECTION TITLE */
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            color: gold;
+            font-size: 2.5rem;
+        }
+
+        /* TOURS SECTION */
+
+        .tours {
+            padding: 70px 40px;
+        }
+
+        .tour-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .tour-card {
+            background: #1e293b;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .tour-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .tour-content {
+            padding: 25px;
+        }
+
+        .tour-content h3 {
+            color: gold;
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+
+        .tour-location {
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+
+        .tour-description {
+            color: #e2e8f0;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .tour-price {
+            color: #22c55e;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .tour-btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            background: gold;
+            color: #111827;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .tour-btn:hover {
+            background: #facc15;
+        }
+
+        /* BOOKING SECTION */
+
+        .booking {
+            padding: 80px 20px;
+            background: #111827;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .booking-container {
+            width: 100%;
+            max-width: 600px;
+            background: #1e293b;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .booking-container h2 {
+            text-align: center;
+            color: gold;
+            margin-bottom: 15px;
+            font-size: 2.3rem;
+        }
+
+        .booking-container p {
+            text-align: center;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .booking-form input,
+        .booking-form select,
+        .booking-form textarea {
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #334155;
+            color: white;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .booking-form textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        .booking-form button {
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: gold;
+            color: #111827;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .booking-form button:hover {
+            background: #facc15;
+        }
+
+        /* BENEFITS */
+
+        .benefits {
+            padding: 70px 40px;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .benefit-card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .benefit-card h3 {
+            color: gold;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 20px;
+            color: #94a3b8;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px) {
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .tours {
+                padding: 60px 20px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="vipaccess.html">Vip Access</a>
+    </div>
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Private Luxury Tours</h1>
+
+            <p>
+                Experience exclusive private tours of the world's finest luxury
+                homes, villas, penthouses, and elite estates with personalized VIP service.
+            </p>
+        </div>
+        <div>
+            <input type="search" placeholder="Search luxury properties">
+            <a href="https://wa.me/123456789">Chat on WhatsApp with us</a>
+        </div>
+    </section>
+
+    <!-- TOURS SECTION -->
+
+    <section class="tours">
+
+        <div class="section-title">
+            <h2>Featured Private Tours</h2>
+        </div>
+
+        <div class="tour-cards">
+
+            <!-- TOUR 1 -->
+
+            <div class="tour-card">
+
+                <img src="images/grad12.jpg" alt="Luxury Mansion">
+
+                <div class="tour-content">
+
+                    <h3>Royal Mansion Tour</h3>
+
+                    <div class="tour-location">
+                        Beverly Hills, California
+                    </div>
+
+                    <p class="tour-description">
+                        Explore an elite mansion featuring a private cinema,
+                        luxury spa, rooftop lounge, and exclusive VIP entertainment areas.
+                    </p>
+
+                    <div class="tour-price">
+                        $4,500 VIP Tour
+                    </div>
+
+                    <a href="#" class="tour-btn">
+                        Reserve Tour
+                    </a>
+                    <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                        ❤️ Save Property
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- TOUR 2 -->
+
+            <div class="tour-card">
+
+                <img src="images/grad13.jpg" alt="Ocean Villa">
+
+                <div class="tour-content">
+
+                    <h3>Oceanfront Villa Tour</h3>
+
+                    <div class="tour-location">
+                        Malibu, California
+                    </div>
+
+                    <p class="tour-description">
+                        Enjoy breathtaking ocean views, infinity pools,
+                        modern interiors, and a fully guided private experience.
+                    </p>
+
+                    <div class="tour-price">
+                        $5,200 VIP Tour
+                    </div>
+
+                    <a href="#" class="tour-btn">
+                        Reserve Tour
+                    </a>
+                    <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                        ❤️ Save Property
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- TOUR 3 -->
+
+            <div class="tour-card">
+
+                <img src="images/grad39.jpg" alt="Penthouse">
+
+                <div class="tour-content">
+
+                    <h3>Skyline Penthouse Tour</h3>
+
+                    <div class="tour-location">
+                        Dubai Marina, UAE
+                    </div>
+
+                    <p class="tour-description">
+                        Discover ultra-modern penthouses with rooftop pools,
+                        smart-home systems, luxury lounges, and skyline views.
+                    </p>
+
+                    <div class="tour-price">
+                        $6,000 VIP Tour
+                    </div>
+
+                    <a href="#" class="tour-btn">
+                        Reserve Tour
+                    </a>
+                    <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                        ❤️ Save Property
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BENEFITS SECTION -->
+
+    <section class="benefits">
+
+        <div class="section-title">
+            <h2>VIP Benefits</h2>
+        </div>
+
+        <div class="benefit-grid">
+
+            <div class="benefit-card">
+                <h3>Private Chauffeur</h3>
+                <p>
+                    Enjoy luxury transportation during your entire VIP property tour experience.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <h3>Luxury Refreshments</h3>
+                <p>
+                    Complimentary gourmet dining and premium drinks included in every tour.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <h3>Exclusive Access</h3>
+                <p>
+                    Access private estates and luxury homes unavailable to the public.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BOOKING FORM -->
+
+    <section class="booking">
+
+        <div class="booking-container">
+
+            <h2>Book Your Private Tour</h2>
+
+            <p>
+                Reserve your VIP luxury experience today.
+            </p>
+
+            <form class="booking-form">
+
+                <input type="text" placeholder="Full Name" required>
+
+                <input type="email" placeholder="Email Address" required>
+
+                <input type="tel" placeholder="Phone Number">
+
+                <select required>
+                    <option value="">Select Tour</option>
+                    <option>Royal Mansion Tour</option>
+                    <option>Oceanfront Villa Tour</option>
+                    <option>Skyline Penthouse Tour</option>
+                </select>
+
+                <textarea placeholder="Additional Requests"></textarea>
+
+                <button type="submit">
+                    Book VIP Tour
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+<script>
+  function toggleWishlist(btn){
+    btn.classList.toggle("saved");
+
+    if(btn.classList.contains("saved")){
+      btn.innerText = "❤️ Saved";
+    } else {
+      btn.innerText = "❤️ Save Property";
+    }
+  }
+</script>
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 VIP Access Private Tours | Luxury Living Experience
+
+    </footer>
+
+</body>
+
+</html>
